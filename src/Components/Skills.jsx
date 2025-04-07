@@ -71,7 +71,7 @@ function Skills() {
 
                 <div className="contact-actions">
 
-                 
+
                     <a href="#contact"
                         className="contact-btn">Email Me</a>
                     {/* Download Resume */}
@@ -90,7 +90,7 @@ function Skills() {
 
                     {/* GitHub Link */}
                     <a
-                        href="https://github.com/your-github-username"
+                        href="hhttps://github.com/DaviiDKumar/Portfolio-David"
                         className="contact-btn"
                         target="_blank"
                         rel="noopener noreferrer"
