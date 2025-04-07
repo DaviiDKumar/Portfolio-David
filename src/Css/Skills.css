@@ -11,8 +11,11 @@
 
 /* Section title */
 .contact-skills-box h2 {
+    color: var(--text-skills);
     text-align: center;
     margin-bottom: 2rem;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
 
     font-weight: 600;
 }
@@ -147,10 +150,10 @@
 .contact-form-box {
     padding: 2rem;
     text-align: center;
-  }
-  
-  .contact-heading {
-    font-size: 2rem;
+}
+
+.contact-heading {
+
     font-weight: bold;
     color: var(--text-primary, #fff);
     display: flex;
@@ -158,45 +161,46 @@
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
-  }
-  
-  .contact-heading .MuiSvgIcon-root {
-    font-size: 2rem;
-    color: var(--accent-color, #00e5ff);
-  }
-  
-  .contact-actions {
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+
+.contact-heading .MuiSvgIcon-root {
+
+    font-size: clamp(1.75rem, 5vw, 5rem);
+}
+
+.contact-actions {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
-  }
-  
-  .contact-btn {
+}
+
+.contact-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
     padding: 0.8rem 1.4rem;
-    background: #0a0a0a;
+    background: var(--bg-skill-container);
     color: #f0f0f0;
-    border: 2px solid #00e5ff;
-    border-radius: 10px;
+    border: 2px solid var(--border-skill);
+    border-radius: 4px;
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
-  }
-  
-  .contact-btn:hover {
-    background: #00e5ff;
-    color: #000;
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+    box-shadow: 0 0 2px rgba(0, 229, 255, 0.3);
+}
+
+.contact-btn:hover {
+
+
+    box-shadow: 1px 1px 10px var(--border-skill);
     transform: translateY(-2px) scale(1.03);
-  }
-  
-  .contact-btn .MuiSvgIcon-root {
+}
+
+.contact-btn .MuiSvgIcon-root {
     font-size: 1.3rem;
-  }
-  
+}

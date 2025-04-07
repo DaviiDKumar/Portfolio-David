@@ -1,0 +1,77 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-line {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Underline animation */
+.loading-line::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--accent);
+  animation: drawLine 1.5s ease-out forwards;
+  animation-delay: 3s; /* Start after last letter */
+  animation-fill-mode: forwards;
+}
+
+@keyframes drawLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.loading-char {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0.35rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: dropIn 0.6s ease-out forwards;
+}
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading-char.space {
+  width: 1.5rem;
+}
+
+/* Responsive: keep text in one line */
+@media (max-width: 480px) {
+  .loading-char {
+    font-size: 1.6rem;
+    margin: 0 0.25rem;
+  }
+
+  .loading-line::after {
+    bottom: -8px;
+  }
+}

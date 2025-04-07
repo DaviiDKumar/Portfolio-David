@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import "../Css/Skills.css";
 
 
+
 const skills = [
     { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", className: "glow-react" },
     { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", className: "glow-node" },
@@ -39,7 +40,7 @@ function Skills() {
     }, []);
 
     return (
-        <div className="contact-container" id="contact">
+        <div className="contact-container" >
             <section className="contact-skills-box">
                 <h2 className="skills-heading">
 
@@ -63,21 +64,25 @@ function Skills() {
             </section>
             <section className="contact-form-box">
                 <br />
-                <h2 className="contact-heading">
+                <h4 className="contact-heading">
                     <span><EmailIcon className="icon-left" /></span>
                     Summon Me With a Spell
-                </h2>
+                </h4>
 
                 <div className="contact-actions">
+
+                 
+                    <a href="#contact"
+                        className="contact-btn">Email Me</a>
                     {/* Download Resume */}
                     <a
-                        href="/your-resume.pdf"
+                        href="/file:///D:/Serious%20Projects/New-portfolio/public/Assets/Icons/Gray%20and%20White%20Simple%20Professional%20Marketing%20Manager%20CV%20Resume.pdf"
                         download
                         className="contact-btn"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <DownloadIcon /> Check Resume
+                        <DownloadIcon /> Download Resume
                     </a>
 
                     {/* Email Link */}
@@ -93,7 +98,7 @@ function Skills() {
                         <GitHubIcon /> View GitHub
                     </a>
 
-                    <h5>Email : david.bkbiet2025@gmail.com</h5>
+
                 </div>
             </section>
 

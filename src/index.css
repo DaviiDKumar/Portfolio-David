@@ -9,7 +9,7 @@
   /* Light container background */
   --bg-div: #f1f1f1;
   --bg-link: #e0e7ff;
-
+  --text-skills: #fff6f6;
   /* Text */
   --text-h1: #091520;
   /* Light theme h1 color */
@@ -52,11 +52,18 @@
   --hover-btn: #2b1237;
   --btn-text: #ffffff;
   --btn-shadow: rgba(0, 0, 0, 0.2);
+  --border-skill: #00e5ff;
+  --accent: #4e116e;
+  --bg-dark: #aaabb5;
+  --text-light: #1a1a1a;
 
 }
 
 /* Dark theme overrides */
 [data-theme="dark"] {
+  --bg-dark: #151b19;
+  --text-light: #eaeaea;
+  --accent: #38af8b;
   /* Backgrounds */
   --bg-body: #232F2B;
   /* Dark main background */
@@ -66,7 +73,7 @@
   /* Dark container background */
   --bg-div: #2a2a2a;
   --bg-link: #3b3f5c;
-
+  --text-skills: #fff6f6;
   /* Text */
   --text-h1: #f5f5f5;
   /* Dark theme h1 color */
@@ -96,6 +103,7 @@
   /* Dark theme border color 1 */
   --border-2: #444444;
   --border-3: #353434;
+  --border-skill: #3b6c53;
   /* Dark theme border color 2 */
 
   /* Shadows */
@@ -105,7 +113,6 @@
   /* Scrollbar */
   --scrollbar-track: #1a1a1a;
   --scrollbar-thumb: #444444;
-
 
 
 

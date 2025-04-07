@@ -133,18 +133,30 @@
 }
 
 .tech-tag {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--bg-div);
-    color: var(--text-strong);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--bg-accent);
+    color: var(--text-accent);
+    padding: 0.35rem 0.7rem;
     border-radius: 2px;
-    border: 1px solid var(--border-1);
-    font-weight: 600;
-    transition: transform 0.2s ease;
+    font-size: 0.9rem;
+   
+    margin: 1rem 0.25rem;
+    transition: all 0.3s ease;
+
+    box-shadow: var(--shadow-2);
 }
 
+.tech-tag .icon {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+
 .tech-tag:hover {
-    transform: scale(1.05);
+   
     background-color: inherit;
     border: 2px solid var(--border-4);
     cursor: pointer;

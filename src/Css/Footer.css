@@ -1,0 +1,99 @@
+.footer {
+  padding: 4rem 2rem 2rem;
+  background-color: var(--bg-dark);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid var(--border-1);
+}
+
+.footer-container {
+  padding: clamp(2rem, 2vw, 4rem) 2rem;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: var(--shadow-2);
+  background-color: var(--bg-container);
+  border-radius: 2%;
+}
+
+.footer-container h2 {
+
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--accent);
+  text-shadow: 0 2px 8px var(--accent);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 2px;
+  border: 1px solid var(--border-1);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-h1);
+  font-size: 0.95rem;
+  resize: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-family: "Geo",serif;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.send-btn {
+  font-family: "Geo",serif;
+  align-self: flex-start;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--primary-btn);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--btn-shadow);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.send-btn:hover {
+  background-color: var(--hover-btn);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-2);
+  width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
