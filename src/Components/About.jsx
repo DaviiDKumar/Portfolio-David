@@ -2,12 +2,8 @@ import { useEffect, useRef } from "react";
 import {
     Person,
     School,
-    Language,
     Work,
-    Info,
-    GitHub as GitHubIcon,
-    LinkedIn as LinkedInIcon,
-    Email as EmailIcon,
+   Translate as TranslateIcon,
 } from "@mui/icons-material";
 import "../Css/About.css";
 
@@ -42,7 +38,7 @@ function AboutPage() {
                     className="about-section about-who fade-left"
                     ref={(el) => (sectionsRef.current[0] = el)}
                 >
-                    <h3><Person /> Who am I?</h3>
+                    <h3><Person /> Introduction </h3>
                     <p>
                         🙋‍♂️ Hey there! I'm David — a final-year Computer Science student, a caffeine-fueled builder of beautiful web things, and a frequent debugger of mysterious errors that vanish when you console.log() them.
                         <br /><br />
@@ -52,7 +48,7 @@ function AboutPage() {
                         <br />
                         ✨ I care about the little details: micro-interactions, seamless UX, and CSS that actually makes sense.
                         <br /><br />
-                        🧠 I’m curious by nature, organized when I need to be, and just the right amount of nerdy to genuinely enjoy learning new frameworks on weekends.
+                        I’m curious by nature, organized when I need to be, and just the right amount of nerdy to genuinely enjoy learning new frameworks on weekends.
                     </p>
                 </div>
 
@@ -105,13 +101,19 @@ function AboutPage() {
                     className="about-section about-languages fade-left"
                     ref={(el) => (sectionsRef.current[2] = el)}
                 >
-                    <h3><Language /> Languages I Speak</h3>
+                    <h3><TranslateIcon/> Languages I Speak</h3>
+
+                   <ul className="language-list">
+                        <li>English</li>
+                        <li>Hindi</li>
+                        
+                        </ul>
                     <p>
-                        🗣️ Fluent in English and Hindi
+                        
                         <br />
-                        👨‍💻 Fluent in dev-speak: "npm install broke everything", "merge conflict again??", and "let me just Google that real quick"
+                        👨‍💻<b>Fluent in dev-speak:</b> <br /> "npm install broke everything", "merge conflict again??", and "let me just Google that real quick"
                         <br />
-                        🤝 I can explain complex code to non-tech folks without turning into a robot (unless it's a themed hackathon)
+                         I can explain complex code to non-tech folks without turning into a robot (unless it's a themed hackathon)
                     </p>
                 </div>
 
@@ -133,30 +135,7 @@ function AboutPage() {
                     </p>
                 </div>
 
-                <div
-                    className="about-section about-contact fade-left"
-                    ref={(el) => (sectionsRef.current[4] = el)}
-                >
-                    <h3><Info /> How to Reach Me</h3>
-                    <p>
-                        📬 Wanna collaborate, ask a question, or send memes? I’m just a click away:
-                        <br /><br />
-                        📧 Email: david.bkbiet2025@gmail.com
-                        <br />
-                        🔗 Social Links Below
-                    </p>
-                    <div className="about-socials-icon">
-                        <a href="https://github.com/DaviiDKumar" target="_blank" rel="noreferrer">
-                            <GitHubIcon />
-                        </a>
-                        <a href="https://linkedin.com/in/daviiidkumar" target="_blank" rel="noreferrer">
-                            <LinkedInIcon />
-                        </a>
-                        <a href="mailto:daviid.webdev@gmail.com" target="_blank" rel="noreferrer">
-                            <EmailIcon />
-                        </a>
-                    </div>
-                </div>
+
             </div>
 
             <div className="about-strip">

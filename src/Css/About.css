@@ -53,8 +53,8 @@
     box-shadow: var(--shadow-2);
     border-left: 3px solid var(--border-2);
     opacity: 0;
-    transform: translateY(60px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(70px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   }
   
   .about-section.slide-in {
@@ -66,30 +66,43 @@
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: clamp(0.5rem, 2vw, 2rem);
+    font-weight: 100;
+    color: var(--accent);
+  
+  }
+  .about-section h3 svg{
+    font-size: clamp(1.5rem, 4.5vw, 3.5rem);;
   }
   
+  .about-section .language-list{
+
+    list-style: none;
+    margin-top: clamp(0.5rem, 2vw, 2rem);
+    gap: clamp(0.5rem, 2vw, 1rem);
+    display: flex;
+  
+
+  }
+
+  .about-section .language-list li {
+    padding: clamp(0.5rem, 2vw, 1rem);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-right: 2px solid var(--border-2);
+    border-bottom: 2px solid var(--border-2);
+    font-size: clamp(1rem, 2vw, 2rem);
+    background-color: var(--bg-body);
+    color: var(--text-1);
+  }
   .about-section p {
     color: var(--text-p);
     line-height: 1.6;
   }
   
-  .about-socials-icon {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
   
-  .about-socials-icon a {
-    color: var(--text-heading);
-    font-size: 1.6rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .about-socials-icon a:hover {
-    color: var(--primary);
-    transform: scale(1.2);
-  }
   
   @media (max-width: 768px) {
     .about-page {

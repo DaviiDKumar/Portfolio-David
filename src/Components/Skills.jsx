@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/InstaGram";
 import "../Css/Skills.css";
 
 
@@ -68,12 +69,12 @@ function Skills() {
                     <span><EmailIcon className="icon-left" /></span>
                     Summon Me With a Spell
                 </h4>
+                <p> Wanna collaborate, ask a question, or send memes? I’m just a click away:</p>
 
                 <div className="contact-actions">
 
 
-                    <a href="#contact"
-                        className="contact-btn">Email Me</a>
+
                     {/* Download Resume */}
                     <a
                         href="/file:///D:/Serious%20Projects/New-portfolio/public/Assets/Icons/Gray%20and%20White%20Simple%20Professional%20Marketing%20Manager%20CV%20Resume.pdf"
@@ -90,12 +91,29 @@ function Skills() {
 
                     {/* GitHub Link */}
                     <a
-                        href="hhttps://github.com/DaviiDKumar/Portfolio-David"
+                        href="david.bkbiet2025@gmail.com"  // Replace with your actual email
+                        className="contact-btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <EmailIcon />  Email ME
+                    </a>
+
+                    <a
+                        href="https://github.com/DaviiDKumar"
                         className="contact-btn"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <GitHubIcon /> View GitHub
+                    </a>
+                    <a
+                        href="https://www.instagram.com/narcissisti.c_?igsh=NDV4YmM3Yjhpc21h"  // Replace with your actual Instagram username
+                        className="contact-btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <InstagramIcon /> Instagram
                     </a>
 
 
