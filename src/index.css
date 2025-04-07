@@ -32,6 +32,7 @@
   --text-link-2: #1e193d;
   /* Light theme link color */
   --text-1: #2A3C37;
+  --text-3: #583a8f;
   --text-2: #0087E0;
   /* Borders */
   --border-1: #cccccc;
@@ -53,6 +54,7 @@
   --btn-text: #ffffff;
   --btn-shadow: rgba(0, 0, 0, 0.2);
   --border-skill: #00e5ff;
+  --border-skill-2: #028998;
   --accent: #4e116e;
   --bg-dark: #aaabb5;
   --text-light: #1a1a1a;
@@ -96,6 +98,7 @@
   --text-link-2: #405851;
   /* Dark theme link color */
   --text-1: #C4D4CF;
+  --text-3: #67e09d;
   --text-2: linear-gradient(135deg, #8FA9A1, #A0BBB3, #C1D5CD);
   --text-glow: linear-gradient(90deg, #a7f5d0, #059626, #0a2515);
   /* Borders */
@@ -104,6 +107,7 @@
   --border-2: #444444;
   --border-3: #353434;
   --border-skill: #3b6c53;
+  --border-skill-2: #28523c;
   /* Dark theme border color 2 */
 
   /* Shadows */

@@ -66,6 +66,10 @@
     color: currentColor;
 }
 
+
+.contact-form-box p{
+    color: var(--border-skill-2);
+}
 /* Glowing color classes */
 .glow-react .skill-icon {
     color: #61dafb;
@@ -164,6 +168,7 @@
     text-decoration: underline;
     text-underline-offset: 0.4rem;
 }
+
 
 .contact-heading .MuiSvgIcon-root {
 
