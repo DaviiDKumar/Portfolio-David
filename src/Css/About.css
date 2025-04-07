@@ -1,0 +1,115 @@
+.about-page {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: var(--bg-container);
+    box-shadow: var(--shadow-2);
+  }
+  
+  .about-strip {
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    max-width: 280px;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    background: var(--bg-container);
+    color: var(--text-h1);
+    border: var(--border-2);
+    box-shadow: var(--shadow-2);
+    font-weight: bold;
+    animation: fadeInUp 0.6s ease-in-out forwards;
+    background: var(--text-glow);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-glow-move 10s linear infinite;
+  }
+  
+  @keyframes text-glow-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .about-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .about-section {
+    background-color: var(--bg-container);
+    padding: 2rem;
+    border-radius: 3px;
+    box-shadow: var(--shadow-2);
+    border-left: 3px solid var(--border-2);
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .about-section.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .about-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .about-section p {
+    color: var(--text-p);
+    line-height: 1.6;
+  }
+  
+  .about-socials-icon {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .about-socials-icon a {
+    color: var(--text-heading);
+    font-size: 1.6rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .about-socials-icon a:hover {
+    color: var(--primary);
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    .about-page {
+      flex-direction: column-reverse;
+      padding: 1rem;
+    }
+  
+    .about-strip {
+      position: sticky;
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      background: var(--bg-container);
+      -webkit-text-fill-color: initial;
+      background-clip: initial;
+    }
+  
+    .about-left {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,202 @@
+/* Base container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: var(--bg-skill-container);
+    color: white;
+
+}
+
+/* Section title */
+.contact-skills-box h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    font-weight: 600;
+}
+
+/* Grid layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.2rem;
+    justify-items: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: clamp(1rem, 2vw, 3rem);
+}
+
+/* Skill box */
+.skill-box {
+    width: 120px;
+    height: 120px;
+    background: var(--bg-skill);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-box:hover .skill-icon,
+.skill-box.glow .skill-icon {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+.skill-box.empty {
+    background: transparent;
+    border: none;
+    pointer-events: none;
+}
+
+/* Skill icon */
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    color: currentColor;
+}
+
+/* Glowing color classes */
+.glow-react .skill-icon {
+    color: #61dafb;
+}
+
+.glow-node .skill-icon {
+    color: #3c873a;
+}
+
+.glow-js .skill-icon {
+    color: #f0db4f;
+}
+
+.glow-html .skill-icon {
+    color: #e34c26;
+}
+
+.glow-css .skill-icon {
+    color: #264de4;
+}
+
+.glow-ts .skill-icon {
+    color: #007acc;
+}
+
+.glow-postman .skill-icon {
+    color: #ff6c37;
+}
+
+.glow-vercel .skill-icon {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    .skill-box {
+        width: 64px;
+        height: 64px;
+    }
+
+    .skill-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .contact-skills-box h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Touch support */
+@media (hover: none) {
+    .skill-box:active .skill-icon {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 8px currentColor);
+    }
+}
+
+
+.contact-form-box {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .contact-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-primary, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-heading .MuiSvgIcon-root {
+    font-size: 2rem;
+    color: var(--accent-color, #00e5ff);
+  }
+  
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.4rem;
+    background: #0a0a0a;
+    color: #f0f0f0;
+    border: 2px solid #00e5ff;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+  }
+  
+  .contact-btn:hover {
+    background: #00e5ff;
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+    transform: translateY(-2px) scale(1.03);
+  }
+  
+  .contact-btn .MuiSvgIcon-root {
+    font-size: 1.3rem;
+  }
+  

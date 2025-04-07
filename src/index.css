@@ -1,0 +1,149 @@
+/* Light theme (default) */
+:root {
+  /* Backgrounds */
+  --bg-body: #E8E9ED;
+  /* Light main background */
+  --bg-container: #D2D3DB;
+  --bg-skill-container: #000000;
+  --bg-skill: #989aa4;
+  /* Light container background */
+  --bg-div: #f1f1f1;
+  --bg-link: #e0e7ff;
+
+  /* Text */
+  --text-h1: #091520;
+  /* Light theme h1 color */
+  --text-h2: #222222;
+  /* Light theme h2 color */
+  --text-h3: #080112;
+  /* Light theme h3 color */
+  --text-h4: #444444;
+  /* Light theme h4 color */
+  --text-h5: #555555;
+  /* Light theme h5 color */
+  --text-h6: #666666;
+  /* Light theme h6 color */
+  --text-p: #1a1a1a;
+  /* Light theme paragraph color */
+  --text-strong: #471D5D;
+  --text-strong2: #291136;
+  /* Light theme strong text color */
+  --text-link-1: #332a6b;
+  --text-link-2: #1e193d;
+  /* Light theme link color */
+  --text-1: #2A3C37;
+  --text-2: #0087E0;
+  /* Borders */
+  --border-1: #cccccc;
+  /* Light theme border color 1 */
+  --border-2: #929292;
+  --border-3: #000000;
+  /* Light theme border color 2 */
+  --text-glow: linear-gradient(90deg, #6d0041, #231542, #0c1037);
+  /* Shadows */
+  --shadow-1: 10px 12px 4px rgba(110, 120, 120, 1);
+  --shadow-2: 10px 12px 4px rgba(110, 120, 120, 1);
+
+  /* Scrollbar */
+  --scrollbar-track: #f0f0f0;
+  --scrollbar-thumb: #cccccc;
+
+  --primary-btn: #52226b;
+  --hover-btn: #2b1237;
+  --btn-text: #ffffff;
+  --btn-shadow: rgba(0, 0, 0, 0.2);
+
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-body: #232F2B;
+  /* Dark main background */
+  --bg-container: #1A2320;
+  --bg-skill-container: #273430;
+  --bg-skill: #668779;
+  /* Dark container background */
+  --bg-div: #2a2a2a;
+  --bg-link: #3b3f5c;
+
+  /* Text */
+  --text-h1: #f5f5f5;
+  /* Dark theme h1 color */
+  --text-h2: #eaeaea;
+  /* Dark theme h2 color */
+  --text-h3: #dddddd;
+  /* Dark theme h3 color */
+  --text-h4: #cccccc;
+  /* Dark theme h4 color */
+  --text-h5: #bbbbbb;
+  /* Dark theme h5 color */
+  --text-h6: #aaaaaa;
+  /* Dark theme h6 color */
+  --text-p: #eaeaea;
+  /* Dark theme paragraph color */
+  --text-strong: #A0BAB2;
+  --text-strong2: #3c4945;
+  /* Dark theme strong text color */
+  --text-link-1: #86b4a6;
+  --text-link-2: #405851;
+  /* Dark theme link color */
+  --text-1: #C4D4CF;
+  --text-2: linear-gradient(135deg, #8FA9A1, #A0BBB3, #C1D5CD);
+  --text-glow: linear-gradient(90deg, #a7f5d0, #059626, #0a2515);
+  /* Borders */
+  --border-1: #333333;
+  /* Dark theme border color 1 */
+  --border-2: #444444;
+  --border-3: #353434;
+  /* Dark theme border color 2 */
+
+  /* Shadows */
+  --shadow-1: 14px 14px 2px rgb(15, 21, 19);
+  --shadow-2: 9px 10px 2px rgb(12, 19, 17);
+
+  /* Scrollbar */
+  --scrollbar-track: #1a1a1a;
+  --scrollbar-thumb: #444444;
+
+
+
+
+  --primary-btn: #47665e;
+  --secondary-btn: #15803d;
+  --hover-btn: #232F2B;
+  --btn-text: #ffffff;
+  --btn-shadow: rgba(0, 0, 0, 0.6);
+}
+
+
+/* Optional: Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

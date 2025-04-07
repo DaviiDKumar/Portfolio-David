@@ -1,0 +1,98 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Geo&family=Iceland&display=swap');
+
+/* ========================================
+   🌐 Base Setup
+======================================== */
+:root {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-body);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Iceland', serif;
+    color: var(--text-p);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ========================================
+   🔠 Typography
+======================================== */
+
+h1 {
+    font-family: 'Iceland', serif;
+    color: var(--text-h1);
+    font-size: clamp(4rem, 6vw, 8rem);
+}
+
+h2 {
+    font-family: 'Iceland', serif;
+    color: var(--text-h2);
+    font-size: clamp(1.75rem, 5vw, 5rem);
+}
+
+h3 {
+    font-family: 'Geo', serif;
+    color: var(--text-h3);
+    font-size: clamp(1.5rem, 4.5vw, 3.5rem);
+}
+
+h4 {
+    font-family: 'Geo', serif;
+    color: var(--text-h4);
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+h5 {
+    font-family: 'Geo', serif;
+    color: var(--text-h5);
+    font-size: clamp(1.1rem, 3vw, 2rem);
+}
+
+h6 {
+    font-family: 'Geo', serif;
+    color: var(--text-h6);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+p {
+    line-height: 1.2;
+    font-family: 'Iceland', serif;
+    color: var(--text-p);
+    font-size: clamp(.7rem, 6vw, 1.5rem);
+}
+
+strong {
+    font-family: 'Iceland', serif;
+    color: var(--text-strong);
+    font-size: clamp(1.2rem, 2.3vw, 1.5rem);
+    font-weight: bold;
+}
+
+/* ========================================
+   🎯 Utilities (Responsive, Flex, Grid, etc.)
+======================================== */
+
+.container {
+    width: clamp(300px, 80vw, 1200px);
+    margin-inline: auto;
+    padding: clamp(1rem, 4vw, 3rem);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
