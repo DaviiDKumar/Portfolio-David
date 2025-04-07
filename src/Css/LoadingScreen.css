@@ -65,9 +65,21 @@
 }
 
 /* Responsive: keep text in one line */
+
+@media (max-width: 768px) {
+  .loading-char {
+    font-size: 1.8rem;
+    margin: 0 0.25rem;
+  }
+
+  .loading-line::after {
+    bottom: -10px;
+  }
+}
+
 @media (max-width: 480px) {
   .loading-char {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: 0 0.25rem;
   }
 

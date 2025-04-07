@@ -161,7 +161,7 @@ function AboutPage() {
 
             <div className="about-strip">
                 <h1>About Me</h1>
-                <p>“Where pixels meet purpose, and every line of code tells a story.”</p>
+                <p>“Making websites that work... and occasionally wow”</p>
             </div>
         </div>
     );
