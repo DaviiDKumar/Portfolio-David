@@ -2,8 +2,13 @@ import React, { useEffect } from "react";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
+<<<<<<< HEAD
 
 import { Instagram as InstagramIcon } from "@mui/icons-material";
+=======
+import { Instagram as InstagramIcon } from "@mui/icons-material";
+
+>>>>>>> 9fbbe14c841fc56854d1f0589d9acc825838f61c
 import "../Css/Skills.css";
 
 
