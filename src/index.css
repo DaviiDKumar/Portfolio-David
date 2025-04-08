@@ -1,4 +1,5 @@
 /* Light theme (default) */
+
 :root {
   /* Backgrounds */
   --bg-body: #E8E9ED;
@@ -70,14 +71,26 @@
   --logo-gradient-2: #2e0844;
   --logo-gradient-3: #9c96a4;
 
+  
+    --cursor-outline: #18032d;
+    --cursor-dot: #270c3c;
+   
 
 
-
+ 
 }
+
 
 /* Dark theme overrides */
 [data-theme="dark"] {
+
   
+  --cursor-glow: rgba(0, 255, 187, 0.3);
+  --cursor-glow-strong: rgba(0, 255, 187, 0.6);
+  --cursor-border: rgba(0, 255, 187, 0.5);
+  --cursor-core: rgba(255, 255, 255, 0.08);
+     /* Greenish glow trail */
+
 
   
   
@@ -156,12 +169,42 @@
   --glass-bg: rgba(255, 255, 255, 0.07);
   --glass-border: rgba(255, 255, 255, 0.12);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+ 
 
-}
+
+  
+    --cursor-outline: #86b4a6;
+    --cursor-dot: #4e6b62;
+  }
+  
+
+
+
+
+
 
 
 /* Optional: Smooth transitions */
+
+#root {
+  position: relative;
+  overflow: hidden;
+}
+
+#root canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none;
+}
+
+
 * {
+ 
+  
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
