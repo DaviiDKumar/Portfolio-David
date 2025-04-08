@@ -27,6 +27,7 @@
     "@mui/material": "^7.0.1",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.6.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -35,6 +36,7 @@
     "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^6.30.0",
     "react-scroll": "^1.9.3",
+    "react-toastify": "^11.0.5",
     "swiper": "^11.2.6"
   }
 }

@@ -93,13 +93,14 @@ function Skills() {
 
                     {/* GitHub Link */}
                     <a
-                        href="david.bkbiet2025@gmail.com"  // Replace with your actual email
+                        href="mailto:david.bkbiet2025@gmail.com"
                         className="contact-btn"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <EmailIcon />  Email ME
+                        <EmailIcon /> Email ME
                     </a>
+
 
                     <a
                         href="https://github.com/DaviiDKumar"
