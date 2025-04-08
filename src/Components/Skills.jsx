@@ -79,7 +79,7 @@ function Skills() {
 
                     {/* Download Resume */}
                     <a
-                        href="/file:///D:/Serious%20Projects/New-portfolio/public/Assets/Icons/Gray%20and%20White%20Simple%20Professional%20Marketing%20Manager%20CV%20Resume.pdf"
+                        href="/file:///D:/Serious%20Projects/New-portfolio/public/Assets/Icons/Main%20Resume%20dvid.pdf"
                         download
                         className="contact-btn"
                         target="_blank"

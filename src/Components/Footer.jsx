@@ -11,10 +11,10 @@ function Footer() {
         e.preventDefault();
 
         emailjs.sendForm(
-            'service_odz445f',
-            'template_56u3a38',
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             form.current,
-            'jcTN7bo3MKu3y0m9h'
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         ).then(
             (result) => {
                 console.log('SUCCESS!', result.text);
@@ -61,7 +61,7 @@ function Footer() {
                 </form>
             </div>
 
-            <ToastContainer /> {/* ← Toast UI injected here */}
+            <ToastContainer />
 
             <div className="footer-bottom">
                 &copy; {new Date().getFullYear()} David Kumar | Built with ❤️ and React
