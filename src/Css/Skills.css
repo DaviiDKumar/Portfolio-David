@@ -48,12 +48,7 @@
    box-shadow: var(--shadow-3);
 
 }
-.skill-postman,
-.skill-canva{
 
-    border-radius: 2%;
-
-}
 .skill-express,
 .skill-vercel{
     background-color: var(--bg-skill);
@@ -125,6 +120,9 @@
 .skill-vercel:hover {
     
     box-shadow: 0 0 75px #ffffffaa;
+}
+.skill-canva:hover {
+    box-shadow: 0 0 75px #0880b8aa;
 }
 
 
