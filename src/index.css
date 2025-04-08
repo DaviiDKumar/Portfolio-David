@@ -5,7 +5,7 @@
   /* Light main background */
   --bg-container: #D2D3DB;
   --bg-skill-container: #000000;
-  --bg-skill: #989aa4;
+  --bg-skill: #f7f7f7;
   /* Light container background */
   --bg-div: #f1f1f1;
   --bg-link: #e0e7ff;
@@ -41,9 +41,12 @@
   --border-3: #000000;
   /* Light theme border color 2 */
   --text-glow: linear-gradient(90deg, #6d0041, #231542, #0c1037);
+  --text-glow-: linear-gradient(90deg, #29003b, #51002b,  #797777, #ccff00);
   /* Shadows */
   --shadow-1: 10px 12px 4px rgba(110, 120, 120, 1);
   --shadow-2: 10px 12px 4px rgba(110, 120, 120, 1);
+  --shadow-5: 2px 2px 1px rgba(110, 120, 120, 1);
+  --shadow-3: 4px 4px 3px rgba(141, 100, 211,1);
 
   /* Scrollbar */
   --scrollbar-track: #f0f0f0;
@@ -55,14 +58,36 @@
   --btn-shadow: rgba(0, 0, 0, 0.2);
   --border-skill: #00e5ff;
   --border-skill-2: #028998;
+  --border-skill-3: #3ee3f6;
   --accent: #4e116e;
   --bg-dark: #aaabb5;
   --text-light: #1a1a1a;
+  --glass-bg: rgba(0, 0, 0, 0.1);
+  --glass-border: rgba(224, 224, 224, 0.35);
+  --glass-shadow: 0 8px 32px rgba(73, 80, 171, 0.1);
+
+  --logo-gradient-1: #34004e;
+  --logo-gradient-2: #2e0844;
+  --logo-gradient-3: #9c96a4;
+
+
+
 
 }
 
 /* Dark theme overrides */
 [data-theme="dark"] {
+  
+
+  
+  
+
+  
+    --logo-gradient-1: #bcf1db;
+    --logo-gradient-2: #03a56f;
+    --logo-gradient-3: #00713c;
+  
+  
   --bg-dark: #151b19;
   --text-light: #eaeaea;
   --accent: #38af8b;
@@ -101,18 +126,21 @@
   --text-3: #67e09d;
   --text-2: linear-gradient(135deg, #8FA9A1, #A0BBB3, #C1D5CD);
   --text-glow: linear-gradient(90deg, #a7f5d0, #059626, #0a2515);
+  --text-glow-: linear-gradient(90deg,  #35e7bd, #0f7860 ,#f9ff4a ,#b9bf00);
   /* Borders */
   --border-1: #333333;
   /* Dark theme border color 1 */
   --border-2: #444444;
   --border-3: #353434;
   --border-skill: #3b6c53;
-  --border-skill-2: #28523c;
+  --border-skill-2: #468d68;
+  --border-skill-3: #68cc98;
   /* Dark theme border color 2 */
 
   /* Shadows */
   --shadow-1: 14px 14px 2px rgb(15, 21, 19);
   --shadow-2: 9px 10px 2px rgb(12, 19, 17);
+  --shadow-3: 9px 10px 2px rgb(12, 19, 17);
 
   /* Scrollbar */
   --scrollbar-track: #1a1a1a;
@@ -125,6 +153,10 @@
   --hover-btn: #232F2B;
   --btn-text: #ffffff;
   --btn-shadow: rgba(0, 0, 0, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+
 }
 
 

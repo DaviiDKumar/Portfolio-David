@@ -18,10 +18,11 @@
 }
 
 .footer-container h2 {
-
+  font-family: "Passero One", system-ui;
   margin-bottom: 2rem;
   text-align: center;
   color: var(--accent);
+  letter-spacing: 4px;
 
 
   background: var(--text-glow);
@@ -43,6 +44,8 @@
 }
 
 .form-group label {
+  font-family: "Quantico", sans-serif;
+  ;
   font-size: clamp(0.8rem, 2vw, 1.2rem);
   margin-bottom: 0.5rem;
   color: var(--text-light);

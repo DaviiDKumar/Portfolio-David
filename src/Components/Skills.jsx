@@ -2,28 +2,80 @@ import React, { useEffect } from "react";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
-
 import { Instagram as InstagramIcon } from "@mui/icons-material";
-
 import "../Css/Skills.css";
 
-
+// Helper to slugify skill names into safe CSS class names
+function slugify(name) {
+    return name.toLowerCase().replace(/[^a-z0-9]/g, "-");
+}
 
 const skills = [
-    { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", className: "glow-react" },
-    { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", className: "glow-node" },
-    { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", className: "glow-node" },
-    { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", className: "glow-node" },
-    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", className: "glow-js" },
-    { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", className: "glow-html" },
-    { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", className: "glow-css" },
-    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", className: "glow-ts" },
-    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", className: "glow-html" },
-    { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", className: "glow-postman" },
-    { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg", className: "glow-vercel" },
-    "", // empty spacing box
-];
+    {
+        name: "React",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        className: "glow-react",
+    },
+    {
+        name: "Node.js",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        className: "glow-node",
+    },
+    {
+        name: "MongoDB",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        className: "glow-node",
+    },
+    {
+        name: "Express",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        className: "glow-node",
+    },
+    {
+        name: "Canva",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+        className: "glow-canvas",
+    },
+  
+    {
+        name: "HTML",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        className: "glow-html",
+    },
+    {
+        name: "CSS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        className: "glow-css",
+    },
+    {
+        name: "Python",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        className: "glow-ts",
+    },
+    {
+        name: "Git",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        className: "glow-html",
+    },
+    {
+        name: "Postman",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+        className: "glow-postman",
+    },
+    {
+        name: "Vercel",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+        className: "glow-vercel",
+    },
+  
+  
+    {
+        name: "JavaScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        className: "glow-js",
+    },
 
+];
 
 function Skills() {
     useEffect(() => {
@@ -43,19 +95,15 @@ function Skills() {
     }, []);
 
     return (
-        <div className="contact-container" >
+        <div className="contact-container">
             <section className="contact-skills-box">
-                <h2 className="skills-heading">
-
-                    Code Spells I Cast
-
-                </h2>
+                <h2 className="skills-heading">Code Spells I Cast</h2>
                 <div className="skills-grid">
                     {skills.map((skill, index) =>
                         skill ? (
                             <div
                                 key={index}
-                                className={`skill-box active ${skill.className}`}
+                                className={`skill-box active ${skill.className} skill-${slugify(skill.name)}`}
                             >
                                 <img src={skill.icon} alt={skill.name} className="skill-icon" />
                             </div>
@@ -65,19 +113,16 @@ function Skills() {
                     )}
                 </div>
             </section>
+
             <section className="contact-form-box">
                 <br />
                 <h4 className="contact-heading">
                     <span><EmailIcon className="icon-left" /></span>
                     Summon Me With a Spell
                 </h4>
-                <p> Wanna collaborate, ask a question, or send memes? I’m just a click away:</p>
+                <p>Wanna collaborate, ask a question, or send memes? I’m just a click away:</p>
 
                 <div className="contact-actions">
-
-
-
-                    {/* Download Resume */}
                     <a
                         href="/file:///D:/Serious%20Projects/New-portfolio/public/Assets/Icons/Main%20Resume%20dvid.pdf"
                         download
@@ -88,10 +133,6 @@ function Skills() {
                         <DownloadIcon /> Download Resume
                     </a>
 
-                    {/* Email Link */}
-
-
-                    {/* GitHub Link */}
                     <a
                         href="mailto:david.bkbiet2025@gmail.com"
                         className="contact-btn"
@@ -101,7 +142,6 @@ function Skills() {
                         <EmailIcon /> Email ME
                     </a>
 
-
                     <a
                         href="https://github.com/DaviiDKumar"
                         className="contact-btn"
@@ -110,20 +150,17 @@ function Skills() {
                     >
                         <GitHubIcon /> View GitHub
                     </a>
+
                     <a
-                        href="https://www.instagram.com/narcissisti.c_?igsh=NDV4YmM3Yjhpc21h"  // Replace with your actual Instagram username
+                        href="https://www.instagram.com/narcissisti.c_?igsh=NDV4YmM3Yjhpc21h"
                         className="contact-btn"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <InstagramIcon /> Instagram
                     </a>
-
-
                 </div>
             </section>
-
-
         </div>
     );
 }

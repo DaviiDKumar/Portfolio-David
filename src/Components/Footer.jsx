@@ -39,7 +39,7 @@ function Footer() {
     return (
         <footer className="footer" id="contact">
             <div className="footer-container">
-                <h2>Get In Touch</h2>
+                <h2>GET IN TOUCH</h2>
                 <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Your Name</label>

@@ -17,6 +17,8 @@
     text-decoration: underline;
     text-underline-offset: 0.5rem;
 
+        font-family: "Iceland", sans-serif;
+          
     font-weight: 600;
 }
 
@@ -36,20 +38,25 @@
 .skill-box {
     width: 120px;
     height: 120px;
-    background: var(--bg-skill);
-    border-radius: 12px;
+    background:transparent;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
+   box-shadow: var(--shadow-3);
 
-.skill-box:hover .skill-icon,
-.skill-box.glow .skill-icon {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 8px currentColor);
+}
+.skill-postman,
+.skill-canva{
+
+    border-radius: 2%;
+
+}
+.skill-express,
+.skill-vercel{
+    background-color: var(--bg-skill);
 }
 
 .skill-box.empty {
@@ -62,46 +69,70 @@
 .skill-icon {
     width: 60px;
     height: 60px;
+    border-radius: 10%;
     transition: transform 0.3s ease, filter 0.3s ease;
     color: currentColor;
+}.skill-react:hover {
+    
+    box-shadow: 0 0 75px #61dafbaa;
+}
+
+.skill-node-js:hover {
+    
+    box-shadow: 0 0 75px #3c873aaa;
+}
+
+.skill-mongodb:hover {
+    
+    box-shadow: 0 0 75px #4db33daa;
+}
+
+.skill-express:hover {
+    
+    box-shadow: 0 0 75px #ffffffaa;
+}
+
+.skill-javascript:hover {
+    
+    box-shadow: 0 0 75px #f0db4faa;
+}
+
+.skill-html:hover {
+    
+    box-shadow: 0 0 75px #e34c26aa;
+}
+
+.skill-css:hover {
+    
+    box-shadow: 0 0 75px #264de4aa;
+}
+
+.skill-python:hover {
+    
+    box-shadow: 0 0 75px #3776abaa;
+}
+
+.skill-git:hover {
+    
+    box-shadow: 0 0 75px #f1502faa;
+}
+
+.skill-postman:hover {
+    
+    box-shadow: 0 0 75px #ff6c37aa;
+}
+
+.skill-vercel:hover {
+    
+    box-shadow: 0 0 75px #ffffffaa;
 }
 
 
 .contact-form-box p{
-    color: var(--border-skill-2);
-}
-/* Glowing color classes */
-.glow-react .skill-icon {
-    color: #61dafb;
+    color: var(--border-skill-3);
 }
 
-.glow-node .skill-icon {
-    color: #3c873a;
-}
 
-.glow-js .skill-icon {
-    color: #f0db4f;
-}
-
-.glow-html .skill-icon {
-    color: #e34c26;
-}
-
-.glow-css .skill-icon {
-    color: #264de4;
-}
-
-.glow-ts .skill-icon {
-    color: #007acc;
-}
-
-.glow-postman .skill-icon {
-    color: #ff6c37;
-}
-
-.glow-vercel .skill-icon {
-    color: #ffffff;
-}
 
 @media (max-width: 1024px) {
     .skills-grid {
@@ -167,6 +198,12 @@
     margin-bottom: 1.5rem;
     text-decoration: underline;
     text-underline-offset: 0.4rem;
+}
+
+.contact-heading span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
