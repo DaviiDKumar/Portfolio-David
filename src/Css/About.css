@@ -5,6 +5,7 @@
     margin: 0 auto;
     background-color: var(--bg-container);
     box-shadow: var(--shadow-2);
+    position: relative;
   }
   
   .about-strip {

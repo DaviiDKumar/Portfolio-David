@@ -13,30 +13,28 @@ const Navbar = () => {
     // Handle scroll direction
     useEffect(() => {
         let ticking = false;
-
         const handleScroll = () => {
             const currentY = window.scrollY;
-
+    
             if (!ticking) {
                 window.requestAnimationFrame(() => {
                     if (currentY < lastScrollY || currentY <= 0) {
-                        setShowNavbar(true); // scrolling up
+                        setShowNavbar(true);  // Show navbar when scrolling up
                     } else {
-                        setShowNavbar(false); // scrolling down
+                        setShowNavbar(false); // Hide navbar when scrolling down
                     }
                     setLastScrollY(currentY);
                     ticking = false;
                 });
-
+    
                 ticking = true;
             }
         };
-
+    
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY]);
-
-
+    
     // Handle theme + click outside
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'light';

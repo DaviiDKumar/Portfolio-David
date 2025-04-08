@@ -2,7 +2,8 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Mainpage from './Pages/Mainpage';
 import LoadingScreen from './Components/LoadingScreen';
-import CustomCursor from './Components/Customcursor';
+import Customcursor from './Components/Customcursor';
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <>
-      <CustomCursor />
+    <Customcursor />
       {isLoading ? (
         <LoadingScreen />
       ) : (

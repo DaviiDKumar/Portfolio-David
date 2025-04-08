@@ -1,8 +1,5 @@
-/* ========================================
-   🌐 Base Navbar Styles
-======================================== */
 .navbar {
-    position: sticky;
+    position: sticky; /* Ensures the navbar stays fixed at the top */
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -21,12 +18,12 @@
     will-change: transform;
 }
 
-.navbar.hide-navbar {
-    transform: translateY(-100%);
+.navbar.show-navbar {
+    transform: translateY(0%); /* Makes navbar visible */
 }
 
-.navbar.show-navbar {
-    transform: translateY(0%);
+.navbar.hide-navbar {
+    transform: translateY(-100%); /* Hides navbar when scrolling down */
 }
 
 .navbar-content {
@@ -48,6 +45,16 @@
     cursor: pointer;
     background-color: transparent;
     max-width: fit-content;
+    display: flex;
+    gap: 0.2rem;
+}
+
+.nav-left-logo .logo span {
+    transition: transform 0.3s ease;
+}
+
+.nav-left-logo .logo span:hover {
+    transform: scale(1.1);
 }
 
 /* ========================================
@@ -72,7 +79,7 @@
     color: var(--text-link-1);
     font-size: clamp(1rem, 2vw, 1.3rem);
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-underline-offset 0.2s ease;
 }
 
 .nav-links li a:hover {
@@ -96,7 +103,6 @@
     margin-left: 2rem;
     padding: 5px;
     transition: transform 0.2s ease;
-  
 }
 
 .theme-toggle svg {
@@ -190,20 +196,20 @@
         gap: 2rem;
         z-index: 11111;
         transition: left 0.3s ease;
-       display: flex;
-       justify-content: flex-start;
-       align-items:flex-start;
-       
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .right_.active .nav-links {
         left: 0;
     }
-.theme-toggle{
-    margin-left: 0;
-}
+
+    .theme-toggle {
+        margin-left: 0;
+    }
+
     .theme-toggle-mobile {
-       
         display: block;
     }
 
@@ -214,9 +220,4 @@
     .burger-icon {
         display: flex;
     }
-
-   
-      
 }
-
-

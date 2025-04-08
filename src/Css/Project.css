@@ -6,6 +6,7 @@
     margin: 0 auto;
     background-color: var(--bg-container);
     box-shadow: var(--shadow-1);
+    position: relative;
 }
 
 .projects-strip {
