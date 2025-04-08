@@ -120,6 +120,7 @@ function Projects() {
               <li>💬 Review & rating system</li>
               <li>🌟 Integrated backend (MERN)</li>
               <li>⚡ Modern CSS</li>
+              <li><a href="https://udem-y-clone.vercel.app/" >Live Perview</a></li>
             </ul>
             <div className="tech-used">
               {renderTech(["React", "Node.js", "Express", "MongoDB", "JWT", "CSS", "CLOUDINARY"])}
