@@ -4,7 +4,7 @@ Welcome to my personal developer portfolio built with **React**, fully responsiv
 
 ## 🔗 Live Demo
 
-🌐 [View Portfolio Live](https://portfolio-david.vercel.app](https://portfolio-david-ten.vercel.app/)
+🌐 [View Portfolio Live](https://portfolio-david-ten.vercel.app/)
 
 ## ✨ Features
 
