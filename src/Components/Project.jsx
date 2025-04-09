@@ -31,12 +31,13 @@ function Projects() {
           const el = entry.target;
           if (entry.isIntersecting) {
             el.classList.add("in-view");
+            
           } else {
             el.classList.remove("in-view");
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: [0, 0.25, 0.75, 1]} 
     );
 
     projectRefs.current.forEach((ref) => {

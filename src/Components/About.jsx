@@ -21,7 +21,9 @@ function AboutPage() {
                     }
                 });
             },
-            { threshold: 0.2 }
+
+           { threshold: [0, 0.25, 0.5, 0.75, 1]} // Multi-stage animation trigger
+
         );
 
         sectionsRef.current.forEach((section) => {
