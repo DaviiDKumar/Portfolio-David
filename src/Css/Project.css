@@ -44,7 +44,7 @@
 
 .project-right {
     flex: 1;
-    padding-right: 1rem;
+    /* padding-right: clamp(0rem, 5vw, 1rem); */
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -155,18 +155,18 @@
 
 .see-more-btn,
 .close-btn-p {
-    margin-top: 1rem;
+    margin: 1rem 0;
     background: var(--bg-body);
     color: var(--text-p);
-    border-left:2px solid var(--border-2);
-    border-right:2px solid var(--border-2);
+    border-left: 2px solid var(--border-2);
+    border-right: 2px solid var(--border-2);
     padding: 0.5rem 1rem;
     border-radius: 2px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-  
-    font-family: "Iceland",serif;
+
+    font-family: "Iceland", serif;
     font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
 
@@ -189,9 +189,7 @@
     transition: transform 0.4s ease;
 }
 
-.main-project-image:hover {
-    transform: scale(1.02);
-}
+
 
 /* Modal images container */
 .modal-images {
@@ -228,11 +226,18 @@
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
-    .project-page{
+    .project-page {
         flex-direction: column;
+        min-width: 100vw;
     }
+
     .main-project-image {
         max-height: 250px;
+    }
+
+    .project-right {
+        padding-right: none !important;
+        width: 100%;
     }
 
     .modal-images img {
@@ -242,6 +247,7 @@
     .modal-content {
         padding: 1.2rem;
     }
+
     .modal-images {
         display: flex;
         flex-direction: column;
