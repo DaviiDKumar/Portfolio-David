@@ -124,7 +124,7 @@ function Skills() {
 
                 <div className="contact-actions">
                     <a
-                        href="/Assets/Icons/Main%20Resume%20dvid.pdf"
+                        href="/Assets/Icons/MainResumeDavid.pdf"
                         download
                         className="contact-btn"
                         target="_blank"
