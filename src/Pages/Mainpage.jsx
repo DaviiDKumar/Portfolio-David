@@ -13,8 +13,8 @@ function Mainpage() {
       <Navbar />
       <Hero />
       <Skills />
-      <AboutPage />
       <Projects />
+      <AboutPage />
       <Footer />
     </>
   );

@@ -10,7 +10,6 @@
 }
 
 .projects-strip {
-
     position: sticky;
     top: 2rem;
     align-self: flex-start;
@@ -22,15 +21,12 @@
     border: var(--border-2);
     box-shadow: var(--shadow-2);
     font-weight: bold;
-    animation: fadeInUp 0.6s ease-in-out forwards;
     background: var(--text-glow);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: text-glow-move 10s linear infinite;
-
 }
-
 
 @keyframes text-glow-move {
     0% {
@@ -78,53 +74,16 @@
     margin-bottom: 1rem;
 }
 
-.carousel {
-    width: 100%;
-    margin: 1rem 0;
-}
-
-.carousel-img {
-    width: 100%;
-    height: 350px;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: var(--shadow-3);
-    transition: transform 0.3s ease;
-}
-
-.splide__arrow {
-    background-color: inherit !important;
-    width: 1rem;
-    height: 1rem;
-    font-size: 1rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-}
-
-.splide__arrow svg {
-    fill: var(--arrow-clr) !important;
-}
-
-.splide__arrow--prev {
-    left: -1.5em !important;
-}
-
-.splide__arrow--next {
-    right: -1.5em !important;
-}
-
-.project-details {
-    padding-top: 1rem;
-}
-
 .project-description {
     font-size: var(--fs-p);
     margin-bottom: 1rem;
     color: var(--text-p);
     line-height: 1.6;
+}
+
+.project-points {
+    padding-left: 1.2rem;
+    color: var(--text-p);
 }
 
 .tech-used {
@@ -143,10 +102,8 @@
     padding: 0.35rem 0.7rem;
     border-radius: 2px;
     font-size: 0.9rem;
-   
     margin: 1rem 0.25rem;
     transition: all 0.3s ease;
-
     box-shadow: var(--shadow-2);
 }
 
@@ -156,43 +113,163 @@
     align-items: center;
 }
 
-
 .tech-tag:hover {
-   
     background-color: inherit;
     border: 2px solid var(--border-4);
     cursor: pointer;
+    transform: scale(1.05);
 }
 
+/* === Modal Styles === */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background: var(--bg-container);
+    border: var(--border-2);
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: var(--shadow-3);
+    animation: scaleUp 0.3s ease-out;
+    position: relative;
+}
+
+.modal-content h4 {
+    margin-bottom: 1rem;
+    color: var(--text-h2);
+}
+
+
+
+
+.see-more-btn,
+.close-btn-p {
+    margin-top: 1rem;
+    background: var(--bg-body);
+    color: var(--text-p);
+    border-left:2px solid var(--border-2);
+    border-right:2px solid var(--border-2);
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+    font-family: "Iceland",serif;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.see-more-btn:hover,
+.close-btn-p:hover {
+    background: var(--accent);
+    color: var(--text-h1);
+    transform: translateY(-2px);
+}
+
+
+/* Main project image */
+.main-project-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 6px;
+    box-shadow: var(--shadow-2);
+    transition: transform 0.4s ease;
+}
+
+.main-project-image:hover {
+    transform: scale(1.02);
+}
+
+/* Modal images container */
+.modal-images {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 80vh;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.modal-images img {
+    width: 100%;
+    aspect-ratio: 6 / 3;
+    /* keeps a nice landscape ratio */
+    object-fit: cover;
+    object-position: top right;
+    border-radius: 6px;
+    box-shadow: var(--shadow-1);
+    transition: transform 0.3s ease;
+}
+
+.modal-images img:hover {
+    transform: scale(1.03);
+}
+
+/* Remove vertical scroll */
+.modal-content {
+    overflow-y: visible;
+    max-height: unset;
+}
+
+
+/* Responsive tweaks */
 @media (max-width: 768px) {
-    .project-page {
+    .project-page{
         flex-direction: column;
-        padding: 1rem;
+    }
+    .main-project-image {
+        max-height: 250px;
     }
 
-    .projects-strip {
-        position: static;
-        max-width: 100%;
-        width: 100%;
-        text-align: center;
-        padding: 1rem;
-        background: var(--text-glow);
-        background-size: 300% 300%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: text-glow-move 10s linear infinite;
-    }
-    .tech-tag {
-       
-       
-        margin: .4rem 0.25rem;}
-
-    .project-right {
-        flex: none;
-        width: 100%;
+    .modal-images img {
+        max-height: 200px;
     }
 
-    .carousel-img {
-        height: 300px;
+    .modal-content {
+        padding: 1.2rem;
+    }
+    .modal-images {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        max-height: 60vh;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+    }
+
+    to {
+        transform: scale(1);
     }
 }

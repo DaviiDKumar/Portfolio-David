@@ -96,7 +96,7 @@ function Skills() {
 
     return (
         <div className="contact-container">
-            <section className="contact-skills-box">
+            <section className="contact-skills-box " id="skills">
                 <h2 className="skills-heading">Code Spells I Cast</h2>
                 <div className="skills-grid">
                     {skills.map((skill, index) =>

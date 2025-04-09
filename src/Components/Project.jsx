@@ -1,7 +1,5 @@
 import "../Css/Project.css";
-import { useEffect, useRef } from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
+import { useState, useEffect, useRef } from "react";
 
 // Import icons
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaCloud, FaJs, FaDatabase } from "react-icons/fa";
@@ -21,6 +19,9 @@ const techIcons = {
 };
 
 function Projects() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleModal = () => setIsOpen(!isOpen);
   const projectRefs = useRef([]);
 
   useEffect(() => {
@@ -45,31 +46,8 @@ function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  const travelImages = ["/Images/travel1.jpg", "/Images/travel2.jpg", "/Images/travel3.jpg", "/Images/travel4.jpg", "/Images/travel5.jpg", "/Images/travel6.jpg"];
-  const travelImages2 = ["/Images/uk2.jpg", "/Images/u3.jpg", "/Images/uk1.jpg", "/Images/uk4.jpg", "/Images/uk5.jpg"];
-  const imagesUdemy = ["/Images/ud1.jpg", "/Images/ud2.jpg", "/Images/ud3.jpg", "/Images/ud4.jpg", "/Images/ud5.jpg", "/Images/ud6.jpg", "/Images/ud6.jpg", "/Images/ud 7.jpg", "/Images/ud9.jpg", "/Images/ud10.jpg"];
 
-  const renderSplide = (images) => (
-    <Splide
-      options={{
-        type: "loop",
-        perPage: 1,
-        gap: "1rem",
-        autoplay: true,
-        interval: 3000,
-        pauseOnHover: true,
-        pagination: false,
-        arrows: true,
-      }}
-      className="carousel"
-    >
-      {images.map((img, i) => (
-        <SplideSlide key={i}>
-          <img src={img} alt={`Slide ${i}`} className="carousel-img" />
-        </SplideSlide>
-      ))}
-    </Splide>
-  );
+
 
   const renderTech = (techList) =>
     techList.map((tech, i) => (
@@ -81,7 +59,7 @@ function Projects() {
   return (
     <div className="project-page" id="projects">
       <section className="projects-strip">
-        <h1>MY Work</h1>
+        <h3>MY Projects</h3>
         <p>“Where pixels meet purpose, and every line of code tells a story.”</p>
       </section>
 
@@ -89,7 +67,25 @@ function Projects() {
         {/* Project 1 */}
         <section className="project-hero" ref={(el) => (projectRefs.current[0] = el)}>
           <h4 className="project-title">GlobeTrek UI – Travel Dreams, Designed</h4>
-          {renderSplide(travelImages)}
+          <div className="project-showcase">
+            <img src="/Images/travel1.jpg" alt="Main Project" className="main-project-image" />
+
+            <button className="see-more-btn" onClick={toggleModal}>See More</button>
+
+            {isOpen && (
+              <div className="modal-overlay" onClick={toggleModal}>
+                <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                  <h4>Additional Screens</h4>
+                  <div className="modal-images">
+                    <img src="/Images/travel4.jpg" alt="More 1" />
+                    <img src="/Images/travel5.jpg" alt="More 2" />
+                    <img src="/Images/travel6.jpg" alt="More 3" />
+                  </div>
+                  <button className="close-btn-p" onClick={toggleModal}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
           <div className="project-details">
             <p className="project-description">
               A vibrant travel website frontend built to captivate and convert.
@@ -101,14 +97,34 @@ function Projects() {
               <li>📱 Mobile-first design</li>
               <li>🖼️ Lazy-loaded images</li>
             </ul>
-            <div className="tech-used">{renderTech(["HTML", "CSS", "JavaScript"])}</div>
+
           </div>
+          <div className="tech-used">{renderTech(["HTML", "CSS", "JavaScript"])}</div>
         </section>
 
         {/* Project 2 */}
         <section className="project-hero" ref={(el) => (projectRefs.current[1] = el)}>
           <h4 className="project-title">EduNexus – A Full-Stack Udemy Clone</h4>
-          {renderSplide(imagesUdemy)}
+
+          <div className="project-showcase">
+            <img src="/Images/ud1.jpg" alt="Main Project" className="main-project-image" />
+            <button className="see-more-btn" onClick={toggleModal}>See More</button>
+
+            {isOpen && (
+              <div className="modal-overlay" onClick={toggleModal}>
+                <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                  <h4>Additional Screens</h4>
+                  <div className="modal-images">
+                    <img src="/Images/ud2.jpg" alt="More 1" />
+                    <img src="/Images/ud3.jpg" alt="More 2" />
+                    <img src="/Images/ud4.jpg" alt="More 3" />
+                  </div>
+                  <button className="close-btn-p" onClick={toggleModal}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
+
           <div className="project-details">
             <p className="project-description">
               A full-stack e-learning platform supporting real course flows and authentication.
@@ -122,33 +138,53 @@ function Projects() {
               <li>⚡ Modern CSS</li>
               <li><a href="https://udem-y-clone.vercel.app/" >Live Perview</a></li>
             </ul>
-            <div className="tech-used">
-              {renderTech(["React", "Node.js", "Express", "MongoDB", "JWT", "CSS", "CLOUDINARY"])}
-            </div>
+          </div>
+          <div className="tech-used">
+            {renderTech(["React", "Node.js", "Express", "MongoDB", "JWT", "CSS", "CLOUDINARY"])}
           </div>
         </section>
 
         {/* Project 3 */}
         <section className="project-hero" ref={(el) => (projectRefs.current[2] = el)}>
-          <h4 className="project-title">UKTourism – A UI/UX Tourism Platform Clone</h4>
-          {renderSplide(travelImages2)}
-          <div className="project-details">
-            <p className="project-description">
-              A polished MERN app mimicking real tourism platforms with modern UX.
-            </p>
-            <ul className="project-points">
-              <li>🌍 Real user flows</li>
-              <li>💡 Smooth transitions, UI feedback</li>
-              <li>📊 REST API with session auth</li>
-              <li>🌟 Reusable React components</li>
-              <li>📱 Responsive grid layout</li>
-              <li>🔐 Protected routes</li>
-            </ul>
-            <div className="tech-used">
-              {renderTech(["React", "Node.js", "MongoDB", "Express", "CSS Modules"])}
-            </div>
+  <h4 className="project-title">UKTourism – A UI/UX Tourism Platform Clone</h4>
+
+  <div className="project-showcase">
+    <img src="/Images/uk4.jpg" alt="Main Project" className="main-project-image" />
+    <button className="see-more-btn" onClick={toggleModal}>See More</button>
+
+    {isOpen && (
+      <div className="modal-overlay" onClick={toggleModal}>
+        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <h4>Additional Screenshots</h4>
+          <div className="modal-images">
+            <img src="/Images/uk2.jpg" alt="More 1" />
+            <img src="/Images/u3.jpg" alt="More 2" />
+            <img src="/Images/uk1.jpg" alt="More 3" />
           </div>
-        </section>
+          <button className="close-btn-p" onClick={toggleModal}>Close</button>
+        </div>
+      </div>
+    )}
+  </div>
+
+  <div className="project-details">
+    <p className="project-description">
+      A polished MERN app mimicking real tourism platforms with modern UX.
+    </p>
+    <ul className="project-points">
+      <li>🌍 Real user flows</li>
+      <li>💡 Smooth transitions, UI feedback</li>
+      <li>📊 REST API with session auth</li>
+      <li>🌟 Reusable React components</li>
+      <li>📱 Responsive grid layout</li>
+      <li>🔐 Protected routes</li>
+    </ul>
+  </div>
+  <div className="tech-used">
+    {renderTech(["React", "Node.js", "MongoDB", "Express", "CSS Modules"])}
+  </div>
+</section>
+
       </div>
     </div>
   );

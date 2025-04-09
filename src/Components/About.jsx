@@ -117,23 +117,7 @@ function AboutPage() {
                     </p>
                 </div>
 
-                <div
-                    className="about-section about-projects fade-left"
-                    ref={(el) => (sectionsRef.current[3] = el)}
-                >
-                    <h3><Work /> Cool Stuff I’ve Built</h3>
-                    <p>
-                        🧩 Here’s a peek into my dev playground:
-                        <br /><br />
-                        ✅ Mini JS projects — to-do apps, modals, calculators, even a game or two
-                        <br />
-                        🌍 A tourism website with MongoDB filtering, custom dark/light theme, and an actually usable UI
-                        <br />
-                        🎓 An Udemy clone with a fully functional shopping cart, login/auth system, and course previews
-                        <br />
-                        🎨 Fun UI experiments — color pickers, animated toggles, and buttons with serious personality
-                    </p>
-                </div>
+              
 
 
             </div>

@@ -81,6 +81,7 @@ const Navbar = () => {
                     <ul className="nav-links">
                         <li><a href="#home" onClick={toggleMenu}>Home</a></li>
                         <li><a href="#about" onClick={toggleMenu}>About</a></li>
+                        <li><a href="#skills" onClick={toggleMenu}>Tech</a></li>
                         <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
                         <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
                         <li className="theme-toggle-mobile">
